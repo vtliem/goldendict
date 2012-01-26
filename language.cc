@@ -364,7 +364,11 @@ Db::Db()
 const BabylonLang BabylonDb[] ={
     { blgCode2Int( 1, 'z', 'h' ), "tw", "Traditional Chinese", QT_TR_NOOP( "Traditional Chinese" ) },
     { blgCode2Int( 2, 'z', 'h' ), "cn", "Simplified Chinese", QT_TR_NOOP( "Simplified Chinese" ) },
+#ifdef NOOTHER2VI
     { blgCode2Int( 3, 0, 0 ), "other", "Other", QT_TR_NOOP( "Other" ) },
+#else
+    { blgCode2Int( 0, 'v', 'i' ), "vn", "Vietnamese", QT_TR_NOOP( "Vietnamese" ) },
+#endif
     { blgCode2Int( 4, 'z', 'h' ), "cn", "Other Simplified Chinese dialects", QT_TR_NOOP( "Other Simplified Chinese dialects" ) },
     { blgCode2Int( 5, 'z', 'h' ), "tw", "Other Traditional Chinese dialects", QT_TR_NOOP( "Other Traditional Chinese dialects" ) },
     { blgCode2Int( 6, 0, 0 ), "other", "Other Eastern-European languages", QT_TR_NOOP( "Other Eastern-European languages" ) },
